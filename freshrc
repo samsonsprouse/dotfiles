@@ -6,7 +6,9 @@ fresh src/shell/aliases/\*
 fresh src/shell/path/\*
 fresh src/shell/\*
 
-#fresh config/vim --file=~/.vim/
+fresh config/com.googlecode.iterm2.plist --file=~/com.googlecode.iterm2.plist
+
+fresh config/vim --file=~/.vim/
 fresh config/\* --file
 
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
