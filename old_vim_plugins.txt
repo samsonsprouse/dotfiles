@@ -1,0 +1,47 @@
+[?1049h[?1h=[1;58r[?12;25h[?12l[?25h[27m[m[38;5;253m[48;5;234m[H[2J[58;1H[?1l>[?1049l
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.006  000.006: --- VIM STARTING ---
+000.049  000.043: Allocated generic buffers
+000.255  000.206: locale set
+000.261  000.006: window checked
+000.544  000.283: inits 1
+000.549  000.005: parsing arguments
+000.550  000.001: expanding arguments
+000.560  000.010: shell init
+2005.694  2005.134: Warning delay
+2006.107  000.413: Termcap init
+2006.119  000.012: inits 2
+2006.187  000.068: init highlight
+2006.342  000.103  000.103: sourcing $VIM/vimrc
+2006.467  000.030  000.030: sourcing /usr/share/vim/vim73/ftoff.vim
+2006.752  000.241  000.241: sourcing /Users/samson/.vim/autoload/pathogen.vim
+2016.555  009.286  009.286: sourcing /usr/share/vim/vim73/filetype.vim
+2016.627  000.027  000.027: sourcing /usr/share/vim/vim73/ftplugin.vim
+2016.687  000.022  000.022: sourcing /usr/share/vim/vim73/indent.vim
+2017.111  000.208  000.208: sourcing /Users/samson/.vim/colors/mustang.vim
+2017.308  000.163  000.163: sourcing /Users/samson/.vim/colors/mustang.vim
+2017.348  010.955  000.978: sourcing $HOME/.vimrc
+2017.353  000.108: sourcing vimrc file(s)
+2017.568  000.053  000.053: sourcing /usr/share/vim/vim73/plugin/getscriptPlugin.vim
+2017.727  000.135  000.135: sourcing /usr/share/vim/vim73/plugin/gzip.vim
+2017.865  000.113  000.113: sourcing /usr/share/vim/vim73/plugin/matchparen.vim
+2018.257  000.366  000.366: sourcing /usr/share/vim/vim73/plugin/netrwPlugin.vim
+2018.292  000.009  000.009: sourcing /usr/share/vim/vim73/plugin/rrhelper.vim
+2018.331  000.017  000.017: sourcing /usr/share/vim/vim73/plugin/spellfile.vim
+2018.454  000.101  000.101: sourcing /usr/share/vim/vim73/plugin/tarPlugin.vim
+2018.509  000.031  000.031: sourcing /usr/share/vim/vim73/plugin/tohtml.vim
+2018.611  000.080  000.080: sourcing /usr/share/vim/vim73/plugin/vimballPlugin.vim
+2018.715  000.078  000.078: sourcing /usr/share/vim/vim73/plugin/zipPlugin.vim
+2018.738  000.402: loading plugins
+2018.741  000.003: inits 3
+2018.811  000.070: reading viminfo
+2018.819  000.008: setting raw mode
+2018.833  000.014: start termcap
+2018.843  000.010: clearing screen
+2019.597  000.754: opening buffers
+2019.624  000.027: BufEnter autocommands
+2019.625  000.001: editing files in windows
