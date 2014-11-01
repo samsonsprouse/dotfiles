@@ -1,17 +1,26 @@
+# Update Fresh
 fresh freshshell/fresh bin/fresh --bin
+
+# Use Fresh to create .bash_profile and .bashrc
+# They will contain a single line of code to source the .freshrc file
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
+# Use Fresh to source in aliases, paths, bash config
 fresh src/shell/aliases/\*
 fresh src/shell/path/\*
 fresh src/shell/\*
 
-fresh config/com.googlecode.iterm2.plist --file=~/com.googlecode.iterm2.plist
-
-fresh config/vim --file=~/.vim/
-fresh config/\* --file
-
+# Source in some app-specific completion scripts for bash
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
 
+# Symlink app configs such as Vim
+fresh config/vim --file=~/.vim/
+fresh config/\* --file
+
+# Symlink scripts(bin) folder
 fresh scripts/\* --bin
+
+# Create iTerm preferences file
+fresh other/com.googlecode.iterm2.plist --file=~/com.googlecode.iterm2.plist
