@@ -37,7 +37,7 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase
 set smartcase
-set gdefault #global by default. use /g to revert to default
+set gdefault " global by default. use /g to revert to default
 " highlight search results
 set incsearch
 set showmatch
