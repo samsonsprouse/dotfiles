@@ -41,15 +41,11 @@ init_vim() {
 
 
 
-
-
-
 # Symlink app configs such as Vim
-fresh config/vim --file=~/.vim/
-#mkdir ~/.vim/.backup/
-#mkdir ~/.vim/.swap/
-#mkdir ~/.vim/.undo/
-
+# fresh config/vim --file=~/.vim/
+# mkdir ~/.vim/.backup/
+# mkdir ~/.vim/.swap/
+# mkdir ~/.vim/.undo/
 
 
 fresh config/\* --file
