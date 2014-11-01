@@ -1,18 +1,41 @@
-" load pathogen
-filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
-
 " don't need to be compliant with vi
 set nocompatible
+
+filetype off
+filetype plugin indent on
+
+" load vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'slim-template/vim-slim'
+
+" color jellybeans
 
 " prevent security exploits
 set modelines=0
 
 " set tab settings
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set encoding=utf-8
@@ -63,5 +86,6 @@ au FocusLost * :wa
 if has('gui_running')
     set guifont=Menlo:h15
 endif
-:colorscheme mustang
+
+" :colorscheme mustang
 set background=dark
