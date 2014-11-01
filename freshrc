@@ -34,18 +34,14 @@ fresh config/vim/gvimrc --file
 fresh config/vim/colors --file=~/.vim/colors/
 
 init_vim() {
+  mkdir -p ~/.vim/.backup/
+  mkdir -p ~/.vim/.swap/
+  mkdir -p ~/.vim/.undo/
+
   if which vim &> /dev/null && ! [ -d $HOME/.vim/bundle/vundle ]; then
     vim || [ -d $HOME/.vim/bundle/vundle ]
   fi
 }
-
-
-
-# Symlink app configs such as Vim
-# fresh config/vim --file=~/.vim/
-# mkdir ~/.vim/.backup/
-# mkdir ~/.vim/.swap/
-# mkdir ~/.vim/.undo/
 
 
 fresh config/\* --file
