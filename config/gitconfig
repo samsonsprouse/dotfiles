@@ -1,0 +1,32 @@
+# Set your name and email with the following:
+#
+# git config -f ~/.gitconfig.local user.name John Appleseed
+# git config -f ~/.gitconfig.local user.email me@example.com
+
+[include]
+  path = .gitconfig.local
+[alias]
+  ci = commit
+  co = checkout
+  com = checkout master
+  s = status
+  b = branch
+  cp = cherry-pick
+  ds = diff --stat
+  track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch --set-upstream $branch ${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
+  hist = log --graph --all --decorate --date=short --abbrev-commit --pretty=format:'  %Cred%h%Creset %C(yellow)- %cr%C(green)%d%Creset %n %x09%s %C(bold blue)<%an>%Creset%n'
+[color]
+  ui = auto
+[core]
+  autocrlf = false 
+  safecrlf = warn
+[push]
+  default = tracking
+[merge]
+  log = true
+  conflictstyle = diff3
+  tool = vimdiff
+[difftool "vimdiff"]
+  cmd = vimdiff $LOCAL $REMOTE
+[mergetool]
+  prompt = false
