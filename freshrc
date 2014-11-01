@@ -2,10 +2,12 @@ fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-fresh shell/aliases/\*
-fresh shell/config/\*
-fresh shell/exports/\*
-fresh shell/\*
+fresh src/shell/aliases/\*
+fresh src/shell/path/\*
+fresh src/shell/\*
+
+#fresh config/vim --file=~/.vim/
+fresh config/\* --file
 
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
