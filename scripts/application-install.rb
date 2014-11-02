@@ -4,7 +4,34 @@ class InstallerMethods
 	CHOICES = {
 		dotfiles_via_fresh: 'bash -c "`FRESH_LOCAL_SOURCE=samssf/dotfiles bash <(curl -sL get.freshshell.com)`"',
 		homebrew: :method,
+		cask: :method,
+		google_chrome: 'brew cask install google-chrome',
+		dropbox: 'brew cask install dropbox',
+		sublime_text_3: 'brew cask install sublime-text3',
+		password_manager_1password: 'brew cask install onepassword',
+		skype: 'brew cask install skype',
+		google_hangouts: 'brew cask install google-hangouts',
+		vagrant: 'brew cask install vagrant163',
+		virtualbox: 'brew cask install virtualbox',
+		hazel: 'brew cask install hazel',
+		karabiner: 'brew cask install karabiner',
+		flux: 'brew cask install flux',
+		vlc: 'brew cask install vlc',
+		handbrake: 'brew cask install handbrake',
+		pdfpen: 'brew cask install pdfpen',
+		airfoil: 'brew cask install airfoil',
+		silverlight: 'brew cask install silverlight',
 	}
+
+	def self.homebrew
+		`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+		`brew doctor`
+	end
+
+	def self.cask
+		`brew install caskroom/cask/brew-cask`
+		`brew tap caskroom/versions`
+	end
 
 	def self.choice_map
 		@choice_map ||= (
@@ -18,11 +45,6 @@ class InstallerMethods
 
 	def self.choice_rmap
 		@choice_rmap ||= choice_map.invert
-	end
-
-	def self.homebrew
-		`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-		`brew doctor`
 	end
 
 	def self.proc_for_choice(choice)
