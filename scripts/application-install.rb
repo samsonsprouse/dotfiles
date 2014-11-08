@@ -1,47 +1,49 @@
 #!/usr/bin/env ruby
 
 class InstallerMethods
-	CHOICES = {
-		dotfiles_via_fresh: 'bash -c "`FRESH_LOCAL_SOURCE=samssf/dotfiles bash <(curl -sL get.freshshell.com)`"',
-		homebrew: :method,
-		cask: :method,
-		google_chrome: 'brew cask install google-chrome',
-		dropbox: 'brew cask install dropbox',
-		sublime_text_3: 'brew cask install sublime-text3',
-		password_manager_1password: 'brew cask install onepassword',
-		skype: 'brew cask install skype',
-		google_hangouts: 'brew cask install google-hangouts',
-		vagrant: 'brew cask install vagrant163',
-		virtualbox: 'brew cask install virtualbox',
-		hazel: 'brew cask install hazel',
-		karabiner: 'brew cask install karabiner',
-		flux: 'brew cask install flux',
-		vlc: 'brew cask install vlc',
-		handbrake: 'brew cask install handbrake',
-		pdfpen: 'brew cask install pdfpen',
-		airfoil: 'brew cask install airfoil',
-		silverlight: 'brew cask install silverlight',
-	}
+  CHOICES = {
+    dotfiles_via_fresh: 'bash -c "`FRESH_LOCAL_SOURCE=samssf/dotfiles bash <(curl -sL get.freshshell.com)`"',
+    homebrew: :method,
+    cask: :method,
+    google_chrome: 'brew cask install google-chrome',
+    dropbox: 'brew cask install dropbox',
+    sublime_text_3: 'brew cask install sublime-text3',
+    password_manager_1password: 'brew cask install onepassword',
+    calibre: 'brew cask install calibre',
+    skype: 'brew cask install skype',
+    truecrypt: 'brew cask install truecrypt',
+    google_hangouts: 'brew cask install google-hangouts',
+    vagrant: 'brew cask install vagrant163',
+    virtualbox: 'brew cask install virtualbox',
+    hazel: 'brew cask install hazel',
+    karabiner: 'brew cask install karabiner',
+    flux: 'brew cask install flux',
+    vlc: 'brew cask install vlc',
+    handbrake: 'brew cask install handbrake',
+    pdfpen: 'brew cask install pdfpen',
+    airfoil: 'brew cask install airfoil',
+    silverlight: 'brew cask install silverlight'
+  }
 
-	def self.homebrew
-		`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-		`brew doctor`
-	end
+  def self.homebrew
+    shell 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+    shell 'brew doctor'
+  end
 
-	def self.cask
-		`brew install caskroom/cask/brew-cask`
-		`brew tap caskroom/versions`
-	end
+  def self.cask
+    shell 'brew install caskroom/cask/brew-cask'
+    shell 'brew tap caskroom/versions'
+  end
 
-	def self.choice_map
-		@choice_map ||= (
-			map = {}
-			CHOICES.keys.each_with_index do |choice_key, index|
-				map[index + 1] = choice_key
-			end
-			map
-		)
-	end
+  def self.choice_map
+    @choice_map ||= (
+      map = {}
+      CHOICES.keys.each_with_index do |choice_key, index|
+        map[index + 1] = choice_key
+      end
+      map
+    )
+  end
 
 	def self.choice_rmap
 		@choice_rmap ||= choice_map.invert
@@ -55,9 +57,17 @@ class InstallerMethods
 			end
 		else
 			Proc.new do
-				`#{code}`
+				puts
+				puts
+				puts "Preparing to install #{choice}"
+				puts "Using command: #{code}"
+				shell(code)
 			end
 		end
+	end
+
+	def self.shell(code)
+		system(code, out: $stdout, err: :out)
 	end
 end
 
@@ -82,7 +92,7 @@ class Installer
 
 	def install
 		@chosen_items.each do |chosen_item_number|
-			chosen_item = InstallerMethods.choice_map(chosen_item_number)
+			chosen_item = InstallerMethods.choice_map[chosen_item_number]
 			proc = InstallerMethods.proc_for_choice(chosen_item)
 			proc.call
 		end
