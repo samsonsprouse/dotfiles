@@ -21,6 +21,7 @@ class InstallerMethods
     flux: 'brew cask install flux',
     vlc: 'brew cask install vlc',
     handbrake: 'brew cask install handbrake',
+    makemkv: "brew cask install makemkv",
     pdfpen: 'brew cask install pdfpen',
     airfoil: 'brew cask install airfoil',
     silverlight: 'brew cask install silverlight'
