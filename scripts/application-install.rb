@@ -12,6 +12,7 @@ class InstallerMethods
     calibre: 'brew cask install calibre',
     skype: 'brew cask install skype',
     truecrypt: 'brew cask install truecrypt71a',
+    asepsis: 'brew cask install asepsis',
     google_hangouts: 'brew cask install google-hangouts',
     vagrant: 'brew cask install vagrant163',
     virtualbox: 'brew cask install virtualbox',
