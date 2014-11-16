@@ -11,6 +11,7 @@ class InstallerMethods
     password_manager_1password: 'brew cask install onepassword',
     calibre: 'brew cask install calibre',
     skype: 'brew cask install skype',
+    keka: 'brew cask install keka',
     truecrypt: 'brew cask install truecrypt71a',
     asepsis: 'brew cask install asepsis',
     google_hangouts: 'brew cask install google-hangouts',
