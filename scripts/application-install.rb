@@ -24,6 +24,7 @@ class InstallerMethods
     handbrake: 'brew cask install handbrake',
     makemkv: "brew cask install makemkv",
     pdfpen: 'brew cask install pdfpen',
+    rescue_time: 'brew cask install rescuetime',
     airfoil: 'brew cask install airfoil',
     silverlight: 'brew cask install silverlight'
   }
