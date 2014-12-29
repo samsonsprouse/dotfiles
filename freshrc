@@ -6,10 +6,11 @@ fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-# Use Fresh to source in aliases, paths, bash config
+# Use Fresh to source in aliases, paths, bash config, rbenv
 fresh src/shell/aliases/\*
 fresh src/shell/path/\*
 fresh src/shell/\*
+fresh src/shell/rbenv.sh
 
 # Source in some app-specific completion scripts for bash
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
