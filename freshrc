@@ -51,4 +51,4 @@ fresh scripts/\* --bin
 # Create iTerm preferences file
 fresh other/com.googlecode.iterm2.plist --file=~/Library/Preferences/com.googlecode.iterm2.plist
 
-fresh config/bundle --file=~/.bundle
+fresh config/bundle ~/.bundle
