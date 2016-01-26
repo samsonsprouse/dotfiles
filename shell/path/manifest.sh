@@ -1,6 +1,3 @@
-DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
-
-source "$DIR/git.sh"
-source "$DIR/rvm.sh"
-source "$DIR/scripts.sh"
+source "${0%/*}/git.sh"
+source "${0%/*}/rvm.sh"
+source "${0%/*}/scripts.sh"

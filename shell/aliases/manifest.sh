@@ -1,6 +1,3 @@
-DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
-
-source "$DIR/grep.sh"
-source "$DIR/ls.sh"
-source "$DIR/postgres.sh"
+source "${0%/*}/grep.sh"
+source "${0%/*}/ls.sh"
+source "${0%/*}/postgres.sh"

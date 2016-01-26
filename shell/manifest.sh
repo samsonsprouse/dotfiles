@@ -1,10 +1,7 @@
-DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source "${0%/*}/aliases/manifest.sh"
+source "${0%/*}/completions/manifest.sh"
+source "${0%/*}/path/manifest.sh"
+source "${0%/*}/other/manifest.sh"
 
-source "$DIR/aliases/manifest.sh"
-source "$DIR/completions/manifest.sh"
-source "$DIR/path/manifest.sh"
-source "$DIR/other/manifest.sh"
-
-source "$DIR/bash.sh"
-source "$DIR/rbenv.sh"
+source "${0%/*}/bash.sh"
+source "${0%/*}/rbenv.sh"
