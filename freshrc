@@ -19,6 +19,10 @@ fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
 
 
+# Install .gitconfig via fresh
+fresh config/gitconfig --file=~/.gitconfig
+
+
 fresh-options --file=~/.vimrc --marker=\"
 #  fresh config/vim/leader.vim
 fresh twe4ked/dotfiles vim/vundle_before.vim
