@@ -7,3 +7,4 @@ alias lda='ls -cda */'            # Directories only (including hidden ones).
 alias ldh='ls -cda .*/'           # Hidden directories only.
 alias lf='ls -p | grep -v "/$"'   # Files only.
 alias lfa='ls -ap | grep -v "/$"' # Files only (including hidden ones).
+

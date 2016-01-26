@@ -1498,3 +1498,5 @@ complete -o default -o nospace -F _gitk gitk
 if [ Cygwin = "$(uname -o 2>/dev/null)" ]; then
 complete -o default -o nospace -F _git git.exe
 fi
+
+
