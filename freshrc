@@ -6,13 +6,17 @@ fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
+
 # Use Fresh to source in aliases, paths, bash config, rbenv
 fresh shell/aliases/\*
 fresh shell/completions/\*
 fresh shell/functions/\*
 fresh shell/path/\*
 fresh shell/bash.sh
+fresh shell/prompt.sh
+ftresh shell/bash_other.sh
 fresh shell/rbenv.sh
+
 
 # Source in some app-specific completion scripts for bash
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
@@ -23,6 +27,7 @@ fresh bobthecow/git-flow-completion git-flow-completion.bash
 fresh config/gitconfig --file=~/.gitconfig
 
 
+# Vim
 fresh-options --file=~/.vimrc --marker=\"
     #  fresh config/vim/leader.vim
     fresh twe4ked/dotfiles vim/vundle_before.vim
@@ -40,14 +45,16 @@ fresh-options
 
 fresh config/vim/gvimrc --file
 fresh config/vim/colors --file=~/.vim/colors/
-
-
 fresh config/vim_init.sh
-# fresh config/vim --file
+
+
+# Bundler
 fresh config/bundle --file=~/.bundle/
+
 
 # Symlink scripts(bin) folder
 fresh scripts/\* --bin
+
 
 # Create iTerm preferences file
 if [ ! -f "~/Library/Preferences/com.googlecode.iterm2.plist" ]; then
