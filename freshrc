@@ -58,7 +58,7 @@ fresh scripts/\* --bin
 
 # Create iTerm preferences file
 if [ ! -f "~/Library/Preferences/com.googlecode.iterm2.plist" ]; then
-  fresh other/com.googlecode.iterm2.plist --file=~/Library/Preferences/com.googlecode.iterm2.plist
+  # t fresh other/com.googlecode.iterm2.plist --file=~/Library/Preferences/com.googlecode.iterm2.plist
 fi
 
 
