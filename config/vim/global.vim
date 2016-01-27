@@ -55,8 +55,8 @@ set formatoptions=qrn1
 set colorcolumn=85
 
 " show hidden characters (tabs, etc)
-set list
-set listchars=tab:▸\ ,eol:¬
+" set list
+" set listchars=tab:▸\ ,eol:¬
 
 " auto save
 au FocusLost * :wa
