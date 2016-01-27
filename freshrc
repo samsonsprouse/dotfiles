@@ -53,3 +53,9 @@ fresh scripts/\* --bin
 if [ ! -f "~/Library/Preferences/com.googlecode.iterm2.plist" ]; then
   fresh other/com.googlecode.iterm2.plist --file=~/Library/Preferences/com.googlecode.iterm2.plist
 fi
+
+mkdir -p ~/.bash_other
+chmod ug+rw ~/.bash_profile
+chmod ug+rw ~/.bashrc
+echo "source_dir ~/.bash_other" >> ~/.bash_profile
+echo "source_dir ~/.bash_other" >> ~/.bashrc
