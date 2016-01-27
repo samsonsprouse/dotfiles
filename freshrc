@@ -14,7 +14,7 @@ fresh shell/functions/\*
 fresh shell/path/\*
 fresh shell/bash.sh
 fresh shell/prompt.sh
-ftresh shell/bash_other.sh
+fresh shell/bash_other.sh
 fresh shell/rbenv.sh
 
 
