@@ -24,25 +24,26 @@ fresh config/gitconfig --file=~/.gitconfig
 
 
 fresh-options --file=~/.vimrc --marker=\"
-#  fresh config/vim/leader.vim
-fresh twe4ked/dotfiles vim/vundle_before.vim
-fresh config/vim/vundle.vim
-#  fresh config/vim/plugins/\*.vim
-#  fresh config/vim/config/\*.vim
-#  fresh config/vim/functions.vim
-#  fresh config/vim/mappings.vim
-#  fresh config/vim/mappings/\*.vim
-#  fresh config/vim/auto_commands.vim
-#  fresh hackling/dotfiles vim/plugins/surround.vim
-fresh twe4ked/dotfiles vim/vundle_after.vim
-fresh config/vim/global.vim
+    #  fresh config/vim/leader.vim
+    fresh twe4ked/dotfiles vim/vundle_before.vim
+    fresh config/vim/vundle.vim
+    #  fresh config/vim/plugins/\*.vim
+    #  fresh config/vim/config/\*.vim
+    #  fresh config/vim/functions.vim
+    #  fresh config/vim/mappings.vim
+    #  fresh config/vim/mappings/\*.vim
+    #  fresh config/vim/auto_commands.vim
+    #  fresh hackling/dotfiles vim/plugins/surround.vim
+    fresh twe4ked/dotfiles vim/vundle_after.vim
+    fresh config/vim/global.vim
 fresh-options
+
 fresh config/vim/gvimrc --file
 fresh config/vim/colors --file=~/.vim/colors/
 
 
 fresh config/vim_init.sh
-fresh config/vim --file
+# fresh config/vim --file
 fresh config/bundle --file=~/.bundle/
 
 # Symlink scripts(bin) folder
