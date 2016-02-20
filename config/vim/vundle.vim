@@ -14,6 +14,9 @@ Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
+" git
+Bundle 'airblade/vim-gitgutter'
+
 " autocomplete
 Bundle "Valloric/YouCompleteMe"
 Bundle "MarcWeber/vim-addon-mw-utils"
