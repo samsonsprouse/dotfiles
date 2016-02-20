@@ -32,7 +32,6 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set relativenumber
 set undofile
 
 " fix vim's searching / regex handling
