@@ -13,4 +13,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'slim-template/vim-slim'
+
+" autocomplete
+Bundle "Valloric/YouCompleteMe"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
