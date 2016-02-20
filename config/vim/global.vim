@@ -75,6 +75,8 @@ let g:airline#extensions#syntastic#enabled     =  1
 " let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
 let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
 
+let g:ctrlp_max_files = 0
+
 
 if has('gui_running')
     set guifont=Menlo:h15
