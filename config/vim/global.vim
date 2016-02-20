@@ -26,6 +26,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
+set noerrorbells
 " set cursorline
 set ttyfast
 set ruler
