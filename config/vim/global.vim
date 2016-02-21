@@ -5,6 +5,9 @@ filetype off
 filetype plugin indent on
 
 
+" set <leader>
+let mapleader=","
+
 " set color
 color mustang
 
