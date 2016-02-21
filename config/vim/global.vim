@@ -8,6 +8,12 @@ filetype plugin indent on
 " set <leader>
 let mapleader=","
 
+" ctrlP config
+let g:ctrlp_map = "<c-p>"
+nnoremap <leader>o :CtrlP<CR>
+nnoremap <leader>e :CtrlPMRU<CR>
+nnoremap <leader>f :CtrlPBuffer<CR>
+
 " set color
 color mustang
 
