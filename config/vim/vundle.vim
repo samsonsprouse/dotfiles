@@ -17,6 +17,8 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 
 " General code
+Bundle "tpope/vim-commentary"
+
 " Ruby
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
