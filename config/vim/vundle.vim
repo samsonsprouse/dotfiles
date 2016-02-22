@@ -22,6 +22,7 @@ Bundle "tpope/vim-commentary"
 " Ruby
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'thoughtbot/vim-rspec'
 
 " git
 Bundle 'airblade/vim-gitgutter'
