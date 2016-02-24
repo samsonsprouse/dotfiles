@@ -4,6 +4,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-dispatch'
 Bundle 'croaker/mustang-vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
@@ -23,11 +24,17 @@ Bundle "tpope/vim-commentary"
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'gabebw/vim-spec-runner'
 
 " git
 Bundle 'airblade/vim-gitgutter'
 
 " autocomplete
-Bundle "Valloric/YouCompleteMe"
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+" Tool integration
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'edkolev/promptline.vim'
+Bundle 'christoomey/vim-tmux-navigator'
