@@ -17,11 +17,13 @@
   hist = log --graph --all --decorate --date=short --abbrev-commit --pretty=format:'  %Cred%h%Creset %C(yellow)- %cr%C(green)%d%Creset %n %x09%s %C(bold blue)<%an>%Creset%n'
   #recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -n5
   recent = for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
+  cached = diff --cached
 [color]
   ui = auto
 [core]
   autocrlf = false 
   safecrlf = warn
+  editor = /usr/local/bin/vim
 [push]
   default = tracking
 [merge]
