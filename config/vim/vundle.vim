@@ -7,7 +7,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'rking/ag.vim'
-Bundle "tpope/vim-commentary"
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
 
 " Look and feel
 Bundle 'vim-airline/vim-airline'
