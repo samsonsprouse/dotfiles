@@ -16,6 +16,7 @@ fresh shell/bash.sh
 fresh shell/prompt.sh
 fresh shell/bash_other.sh
 fresh shell/rbenv.sh
+fresh shell/docker.sh
 
 
 # Source in some app-specific completion scripts for bash
