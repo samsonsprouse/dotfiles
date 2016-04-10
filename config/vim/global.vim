@@ -88,13 +88,30 @@ let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_max_files = 0
 
 
-if has('gui_running')
-    set guifont=Menlo:h15
-endif
-
 " :colorscheme mustang
 set background=dark
 
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swap//
 set undodir=~/.vim/.undo//
+
+if has('gui_running')
+  set guifont=Source\ Code\ Pro\ for\ Powerline 
+  " let g:rspec_runner = "os_x_iterm2"
+  map <Leader>rs :Dispatch rspec %<CR>
+  " map <Leader>rn :call RunNearestSpec()<CR>
+  " map <Leader>rl :call RunLastSpec()<CR>
+  " map <Leader>ra :call RunAllSpecs()<CR>
+else
+  " RSpec.vim commands
+  map <Leader>rs :call RunCurrentSpecFile()<CR>
+  map <Leader>rn :call RunNearestSpec()<CR>
+  map <Leader>rl :call RunLastSpec()<CR>
+  map <Leader>ra :call RunAllSpecs()<CR>
+  
+  let g:rspec_runner = "os_x_iterm2"
+  let g:rspec_command = "compiler rspec | set makeprg=spring | Make rspec --format progress {spec}"
+endif
+
+
+
