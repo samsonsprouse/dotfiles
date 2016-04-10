@@ -9,6 +9,7 @@ Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'terryma/vim-multiple-cursors'
 
 " Look and feel
 Bundle 'vim-airline/vim-airline'
