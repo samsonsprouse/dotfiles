@@ -1,3 +1,79 @@
+" fresh: twe4ked/dotfiles vim/vundle_before.vim
+
+let run_bundle_install = 0
+
+if !isdirectory(expand("~/.vim/bundle/vundle/"))
+  silent !echo "Installing Vundle..."
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let run_bundle_install = 1
+endif
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "gmarik/vundle"
+
+" fresh: config/vim/vundle.vim
+
+" Bundles
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'JazzCore/ctrlp-cmatcher'
+Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
+Bundle 'terryma/vim-multiple-cursors'
+
+" Look and feel
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'croaker/mustang-vim'
+Bundle 'nanotech/jellybeans.vim'
+
+" Ruby
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'gabebw/vim-spec-runner'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'AndrewRadev/splitjoin.vim'
+
+" git
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+
+" autocomplete
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+" Tool integration
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'edkolev/promptline.vim'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'alvan/vim-closetag'
+
+" fresh: twe4ked/dotfiles vim/vundle_after.vim
+
+if run_bundle_install == 1
+  :BundleInstall
+
+  silent !echo ""
+  silent !echo "Vim is now ready."
+  :cq
+endif
+
+" fresh: config/vim/global.vim
+
 " don't need to be compliant with vi
 set nocompatible
 
@@ -116,3 +192,6 @@ endif
 " Fix issue where vim-autoclose combined youcompleteme cause escape to only
 " exit autocomplete dialog and not go back to command mode
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+
+
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
