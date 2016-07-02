@@ -24,6 +24,7 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'gabebw/vim-spec-runner'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'AndrewRadev/splitjoin.vim'
 
 " git
 Bundle 'tpope/vim-fugitive'

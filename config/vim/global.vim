@@ -113,5 +113,6 @@ else
   let g:rspec_command = "compiler rspec | set makeprg=spring | Make rspec --format progress {spec}"
 endif
 
-
-
+" Fix issue where vim-autoclose combined youcompleteme cause escape to only
+" exit autocomplete dialog and not go back to command mode
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
