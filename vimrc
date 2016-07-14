@@ -61,6 +61,8 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'edkolev/promptline.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'alvan/vim-closetag'
+Bundle 'christoomey/vim-tmux-runner'
+Bundle 'junegunn/fzf'
 
 " fresh: twe4ked/dotfiles vim/vundle_after.vim
 
