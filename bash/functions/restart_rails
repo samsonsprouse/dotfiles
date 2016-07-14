@@ -1,0 +1,10 @@
+restart_rails() {
+  if [ -f "tmp/pids/server.pid" ]; then
+    echo 'Killing rails...'
+    kill -9 `cat tmp/pids/server.pid`
+    echo 'Done.'
+  fi
+  echo 'Starting rails...'
+  bundle exec rails s -d
+  echo 'Done.'
+}
