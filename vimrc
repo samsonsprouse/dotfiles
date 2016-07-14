@@ -84,7 +84,7 @@ filetype plugin indent on
 
 
 " set <leader>
-let mapleader="'"
+let mapleader=" "
 
 " ctrlP config
 let g:ctrlp_map = "<c-p>"
