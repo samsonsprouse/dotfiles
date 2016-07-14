@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+# Attach or create tmux session named the same as current directory.
+
+path_name="$(basename "$PWD" | tr . -)"
+session_name=${1-$path_name}
+
+not_in_tmux() {
+  [ -z "$TMUX" ]
+}
+
+session_exists() {
+  tmux list-sessions | sed -E 's/:.*$//' | grep -q "^$session_name$"
+}
+
+create_detached_session() {
+  (TMUX='' tmux new-session -Ad -s "$session_name")
+}
+
+tmuxinator_config_exists() {
+  [ -f "$HOME/.tmuxinator/$session_name.yml" ]
+}
+
+create_detached_session_with_tmuxinator() {
+  (tmuxinator start "$session_name" --no-attach)
+}
+
+create_if_needed_and_attach() {
+  if not_in_tmux; then
+    if ! tmuxinator_config_exists; then
+      tmux new-session -As "$session_name"
+    else
+      create_detached_session_with_tmuxinator
+      tmux attach -t "$session_name"
+    fi
+  else
+    if ! session_exists; then
+      if ! tmuxinator_config_exists; then
+        create_detached_session
+      else
+        create_detached_session_with_tmuxinator
+      fi
+    fi
+    tmux switch-client -t "$session_name"
+  fi
+}
+
+create_if_needed_and_attach
