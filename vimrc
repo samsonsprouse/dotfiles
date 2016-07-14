@@ -199,3 +199,28 @@ let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+  map <Leader>rz :Dispatch rspec %<CR>
+let g:VtrClearBeforeSend = 0
+
+nnoremap <leader>rr :VtrSendCommandToRunner! restart_rails<cr>:VtrKillRunner<cr>
+
+function! s:select_handler(line)
+  let tokens = split(a:line, '  ')
+  put =tokens[0].' '
+  normal kJ^$
+endfunction
+
+nnoremap <silent> <Leader>j :call fzf#run({
+\   'source': "! ~/Development/Jira/jiras.rb",
+\   'sink':    function('<sid>select_handler'),
+\   'down':    '30%',
+\   'options': '--ansi'
+\ })<CR>
+
