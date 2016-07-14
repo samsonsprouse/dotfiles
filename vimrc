@@ -182,13 +182,15 @@ if has('gui_running')
   " map <Leader>ra :call RunAllSpecs()<CR>
 else
   " RSpec.vim commands
-  map <Leader>rs :call RunCurrentSpecFile()<CR>
-  map <Leader>rn :call RunNearestSpec()<CR>
+  map <Leader>rf :call RunCurrentSpecFile()<CR>
+  map <Leader>rs :call RunNearestSpec()<CR>
   map <Leader>rl :call RunLastSpec()<CR>
   map <Leader>ra :call RunAllSpecs()<CR>
   
   let g:rspec_runner = "os_x_iterm2"
-  let g:rspec_command = "compiler rspec | set makeprg=spring | Make rspec --format progress {spec}"
+  let g:rspec_command = "compiler rspec | set makeprg=bin/spring | Make rspec --format progress {spec}"
+  " let g:rspec_command = "VtrSendCommandToRunner! bin/spring rspec {spec}"
+  let g:dispatch_quickfix_height = 20
 endif
 
 " Fix issue where vim-autoclose combined youcompleteme cause escape to only
