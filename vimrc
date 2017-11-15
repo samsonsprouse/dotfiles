@@ -98,6 +98,10 @@ let g:ctrlp_map = "<c-p>"
 nnoremap <leader>o :CtrlP<CR>
 nnoremap <leader>e :CtrlPMRU<CR>
 nnoremap <leader>f :CtrlPBuffer<CR>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|public$|log\|tmp$\|node_modules$\|app\/assets\/webpack$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 
 " set color
 color mustang
