@@ -150,7 +150,22 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
+set relativenumber
+set number
+set lazyredraw
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
 
 " show hidden characters (tabs, etc)
 " set list
@@ -172,6 +187,9 @@ let g:airline#extensions#syntastic#enabled     =  1
 " let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
 " let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
 let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_max_files = 0
@@ -199,8 +217,10 @@ else
   map <Leader>ra :call RunAllSpecs()<CR>
   
   let g:rspec_runner = "os_x_iterm2"
-  let g:rspec_command = "compiler rspec | set makeprg=bin/spring | Make rspec --format progress {spec}"
+  let g:rspec_command = "compiler rspec | Make --format progress {spec}"
+  " let g:rspec_command = "compiler rspec | set makeprg=bin/spring | Make rspec --format progress {spec}"
   " let g:rspec_command = "VtrSendCommandToRunner! bin/spring rspec {spec}"
+  " let g:rspec_command = "Dispatch rspec {spec}"
   let g:dispatch_quickfix_height = 20
 endif
 
@@ -235,3 +255,5 @@ nnoremap <silent> <Leader>j :call fzf#run({
 \   'options': '--ansi'
 \ })<CR>
 
+
+:nmap <leader>p o<ESC>p==
