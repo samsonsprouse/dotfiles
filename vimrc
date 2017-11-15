@@ -64,6 +64,13 @@ Bundle 'alvan/vim-closetag'
 Bundle 'christoomey/vim-tmux-runner'
 Bundle 'junegunn/fzf'
 
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+
+Bundle 'vim-scripts/AnsiEsc.vim'
+
+Bundle 'tpope/vim-vinegar.git'
+
 " fresh: twe4ked/dotfiles vim/vundle_after.vim
 
 if run_bundle_install == 1
