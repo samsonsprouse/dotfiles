@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for k in $(git branch --remote --merged | sed /\*/d); do 
+  if ! [ -n "$(git log -1 --since='6 months ago' -s $k -- )" ]; then
+    echo "$k"
+  fi
+done

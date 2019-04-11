@@ -71,6 +71,9 @@ Bundle 'vim-scripts/AnsiEsc.vim'
 
 Bundle 'tpope/vim-vinegar.git'
 
+Bundle 'majutsushi/tagbar'
+Bundle 'ludovicchabant/vim-gutentags'
+
 " fresh: twe4ked/dotfiles vim/vundle_after.vim
 
 if run_bundle_install == 1
@@ -257,3 +260,5 @@ nnoremap <silent> <Leader>j :call fzf#run({
 
 
 :nmap <leader>p o<ESC>p==
+
+:nmap gd <C-]>
