@@ -32,3 +32,7 @@ antigen theme robbyrussell
 
 # Tell antigen that you're done.
 antigen apply
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/samson/.sdkman"
+[[ -s "/Users/samson/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/samson/.sdkman/bin/sdkman-init.sh"
