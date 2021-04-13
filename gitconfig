@@ -8,17 +8,16 @@
 [alias]
   ci = commit
   co = checkout
-  com = checkout master
+  com = checkout main
   s = status
-  b = branch
+  b = branch --sort=-committerdate
   cp = cherry-pick
   ds = diff --stat
   track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch --set-upstream $branch ${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
   hist = log --graph --all --decorate --date=short --abbrev-commit --pretty=format:'  %Cred%h%Creset %C(yellow)- %cr%C(green)%d%Creset %n %x09%s %C(bold blue)<%an>%Creset%n'
-  #recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -n5
   recent = for-each-ref --sort=committerdate refs/heads/ --format='%(refname:short) %(committerdate:short) %(authorname) %(refname:short) %(contents:subject)'
   cached = diff --cached
-  unmerged = branch -r --no-merged origin/master --sort=committerdate
+  unmerged = branch -r --no-merged origin/main --sort=committerdate
 [color]
   ui = auto
 [core]
